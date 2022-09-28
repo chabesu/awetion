@@ -102,9 +102,9 @@ const blogConfig: BlogConfig = {
     },
   ],
   account: {
-    name: "steelydylan",
+    name: "チャベス",
     description: "profile here profile here profile here profile here",
-    image: `/images/me.jpeg`,
+    image: `/images/me.png`,
     social: {
       twitter: "https://twitter.com/steelydylan",
       github: "https://github.com/steelydylan",
@@ -118,10 +118,10 @@ const blogConfig: BlogConfig = {
       image: "/images/me.jpeg",
     },
     {
-      id: "steelydylan",
-      name: "steelydylan",
+      id: "chabesu",
+      name: "チャベス",
       description: "profile here profile here profile here profile here",
-      image: "/images/me.jpeg",
+      image: "/images/me.png",
     },
   ],
   categories: [
