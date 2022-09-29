@@ -7,10 +7,10 @@ const blogConfig: BlogConfig = {
     width: "201",
     height: "39",
   },
-  siteName: "AWESOME",
+  siteName: "AWETION",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
-  title: "AWESOME",
-  description: "AWESOME Next.js TypeScript MDX Blog Theme",
+  title: "AWETION",
+  description: "AWESOME Blog Theme + Notion",
   googleAnalyticsCode: "", // G-**********
   googleAdsenseCode: "", // ca-pub-****************
   notFoundPage: {
@@ -66,104 +66,102 @@ const blogConfig: BlogConfig = {
     },
   },
   hero: {
-    title: "My awesome life",
-    image: "/images/plane.jpeg",
-    description: "AWESOME Next.js TypeScript MDX Blog Theme",
+    title: "A W T I O N .",
+    image: "/images/sinwave.gif",
+    description: "AWESOME Blog Theme + Notion as Headless CMS ≒ A W T I O N",
   },
   footer: {
-    title: "AWESOME Next.js TypeScript MDX Blog Theme",
+    title: "AWESOME Blog Theme + Notion as Headless CMS",
   },
   article: {
-    defaultThumbnail: "/images/plane.jpeg",
+    defaultThumbnail: "/images/sinwave.gif",
     articlesPerPage: 6,
   },
   navigation: [
     {
-      name: "travel",
-      url: `/travel`,
+      name: "awtion",
+      url: `/awtion`,
     },
     {
-      name: "camp",
-      url: `/camp`,
+      name: "english",
+      url: `/english`,
+    },
+    {
+      name: "Journal",
+      url: `/journal`,
     },
   ],
   subNavigation: [
     {
-      name: "terms",
-      url: "/about/terms",
+      name: "about",
+      url: "/about/about",
     },
     {
-      name: "privacy",
-      url: "/about/privacy",
+      name: "雑学エンジニアブログ",
+      url: "https://zatsugaku-engineer.com/",
     },
     {
-      name: "GitHub",
-      url: "https://github.com/steelydylan/Awesome",
+      name: "チャベログ",
+      url: "https://chabelog.com/",
     },
   ],
   account: {
     name: "チャベス",
-    description: "profile here profile here profile here profile here",
+    description: "Product Development Engineer, Notioner",
     image: `/images/me.png`,
     social: {
-      twitter: "https://twitter.com/steelydylan",
-      github: "https://github.com/steelydylan",
+      twitter: "https://twitter.com/ChabesuB",
+      github: "https://github.com/chabesu/awtion",
     },
   },
   writers: [
+    {
+      id: "チャベス",
+      name: "チャベス",
+      description: "Product Development Engineer, Notioner",
+      image: "/images/me.png",
+    },
     {
       id: "awesome",
       name: "Mr. AWESOME",
       description: "profile here profile here profile here profile here",
       image: "/images/me.jpeg",
     },
-    {
-      id: "chabesu",
-      name: "チャベス",
-      description: "profile here profile here profile here profile here",
-      image: "/images/me.png",
-    },
   ],
   categories: [
     {
       id: "about",
       title: "About",
-      imagePath: "/images/camp.jpeg",
-      description: "",
+      imagePath: "/images/me.png",
+      description: "About Me",
     },
     {
-      id: "camp",
-      title: "Camp",
-      imagePath: "/images/camp.jpeg",
-      description: "Look at my awesome camp life",
+      id: "awtion",
+      title: "AWTION",
+      imagePath: "/images/sinwave.gif",
+      description: "Articles about AWTION",
     },
     {
-      id: "travel",
-      title: "Travel",
-      imagePath: "/images/london.jpeg",
-      description: "Look at my awesome travel life",
+      id: "english",
+      title: "English",
+      imagePath: "/images/english.jpg",
+      description: "Articles about Learning English",
+    },
+    {
+      id: "journal",
+      title: "Journal",
+      imagePath: "/images/journal.jpg",
+      description: "My Journal",
     },
   ],
   tags: [
     {
-      id: "london",
-      title: "London",
+      id: "tech",
+      title: "Tech",
     },
     {
-      id: "boston",
-      title: "Boston",
-    },
-    {
-      id: "paris",
-      title: "Paris",
-    },
-    {
-      id: "fire",
-      title: "Fire",
-    },
-    {
-      id: "sky",
-      title: "Sky",
+      id: "play",
+      title: "Play",
     },
   ],
 };
