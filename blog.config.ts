@@ -111,7 +111,7 @@ const blogConfig: BlogConfig = {
     image: `/images/me.png`,
     social: {
       twitter: "https://twitter.com/ChabesuB",
-      github: "https://github.com/chabesu/awtion",
+      github: "https://github.com/chabesu/awetion",
     },
   },
   writers: [
