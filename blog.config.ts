@@ -9,7 +9,7 @@ const blogConfig: BlogConfig = {
   },
   siteName: "AWETION",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
-  title: "AWETION",
+  title: "A W E T I O N .",
   description: "AWESOME Blog Theme + Notion",
   googleAnalyticsCode: "", // G-**********
   googleAdsenseCode: "", // ca-pub-****************
@@ -66,9 +66,9 @@ const blogConfig: BlogConfig = {
     },
   },
   hero: {
-    title: "A W T I O N .",
+    title: "A W E T I O N .",
     image: "/images/sinwave.gif",
-    description: "AWESOME Blog Theme + Notion as Headless CMS ≒ A W T I O N",
+    description: "AWESOME Blog Theme + Notion as Headless CMS ≒ A W E T I O N",
   },
   footer: {
     title: "AWESOME Blog Theme + Notion as Headless CMS",
@@ -79,15 +79,15 @@ const blogConfig: BlogConfig = {
   },
   navigation: [
     {
-      name: "awtion",
-      url: `/awtion`,
+      name: "tech",
+      url: `/tech`,
     },
     {
-      name: "english",
-      url: `/english`,
+      name: "study",
+      url: `/study`,
     },
     {
-      name: "Journal",
+      name: "journal",
       url: `/journal`,
     },
   ],
@@ -136,16 +136,16 @@ const blogConfig: BlogConfig = {
       description: "About Me",
     },
     {
-      id: "awtion",
-      title: "AWTION",
+      id: "tech",
+      title: "Tech",
       imagePath: "/images/sinwave.gif",
-      description: "Articles about AWTION",
+      description: "Articles about Tech",
     },
     {
-      id: "english",
-      title: "English",
+      id: "study",
+      title: "Study",
       imagePath: "/images/english.jpg",
-      description: "Articles about Learning English",
+      description: "Articles about study",
     },
     {
       id: "journal",
@@ -156,12 +156,12 @@ const blogConfig: BlogConfig = {
   ],
   tags: [
     {
-      id: "tech",
-      title: "Tech",
+      id: "awesome",
+      title: "AWESOME",
     },
     {
-      id: "play",
-      title: "Play",
+      id: "english",
+      title: "English",
     },
   ],
 };
