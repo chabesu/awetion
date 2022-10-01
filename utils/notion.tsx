@@ -37,6 +37,7 @@ export const getDatabase = async (
       page: "",
       id: result.id,
       category: "",
+      tags: [],
     };
     Object.keys(d).forEach((key) => {
       const property = d[key];
@@ -57,18 +58,18 @@ export const getDatabase = async (
       } else if (property.type === "checkbox") {
         item[key.toLowerCase()] = property.checkbox;
       } else if (property.type === "multi_select") {
-        item[key.toLowerCase()] = property.multi_select?.[0]?.name;
+        property.multi_select.map((e) => item[key.toLowerCase()].push(e.name));
       } else if (property.type === "select") {
         item[key.toLowerCase()] = property.select?.name;
       } else if (property.type === "date") {
         item[key.toLowerCase()] = property.date?.start;
       }
     });
-    // console.log(item)
+    // console.log(item);
     return {
       content: "",
       data: {
-        tags: [],
+        tags: item.tags,
         title: item.page,
         date: item.date,
         category: item.category,
