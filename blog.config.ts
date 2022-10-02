@@ -97,12 +97,8 @@ const blogConfig: BlogConfig = {
       url: "/about/about",
     },
     {
-      name: "雑学エンジニアブログ",
-      url: "https://zatsugaku-engineer.com/",
-    },
-    {
-      name: "チャベログ",
-      url: "https://chabelog.com/",
+      name: "Portfolio",
+      url: "https://notion-portfolio-site.vercel.app/",
     },
   ],
   account: {
