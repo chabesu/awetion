@@ -1,3 +1,4 @@
+import { GetStaticPaths } from "next";
 import { NextSeo } from "next-seo";
 import { getArticles } from "@/utils/get-articles";
 import { Layout } from "@/components/layout";
@@ -52,7 +53,22 @@ const PageDetail = ({
 
 export default PageDetail;
 
-export const getServerSideProps = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = await getArticles();
+  const paths = [];
+  articles.forEach((article, index) => {
+    if ((index + 1) % blogConfig.article.articlesPerPage === 0) {
+      paths.push({
+        params: {
+          id: `${(index + 1) / blogConfig.article.articlesPerPage + 1}`,
+        },
+      });
+    }
+  });
+  return { paths, fallback: "blocking" };
+};
+
+export const getStaticProps = async ({ params }) => {
   const articles = await getArticles();
   const { id } = params;
   const current = parseInt(id, 10) - 1;

@@ -26,5 +26,5 @@ export const getArticle = async (
   if (blogConfig.use === "notion") {
     return getArticleFromNotion(slug);
   }
-  return getArticleFromFile(slug)
+  return getArticleFromFile(slug);
 };
