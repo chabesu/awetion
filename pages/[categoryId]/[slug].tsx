@@ -1,5 +1,5 @@
 import { renderToString } from "react-dom/server";
-import { GetStaticProps, GetStaticPaths } from "next";
+// import { GetStaticProps, GetStaticPaths } from "next";
 import { NextSeo, ArticleJsonLd, ArticleJsonLdProps } from "next-seo";
 import { getArticle, getArticles } from "@/utils/get-articles";
 import { Article } from "@/types";
@@ -112,23 +112,23 @@ export default ({ article, related }: DetailProps) => {
   );
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const articles = await getArticles();
-  const paths = articles
-    .filter((a) => a.slug)
-    .map((article) => {
-      return {
-        params: {
-          id: article.slug,
-          categoryId: article.data.category,
-          slug: article.slug,
-        },
-      };
-    });
-  return { paths, fallback: "blocking" };
-};
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const articles = await getArticles();
+//   const paths = articles
+//     .filter((a) => a.slug)
+//     .map((article) => {
+//       return {
+//         params: {
+//           id: article.slug,
+//           categoryId: article.data.category,
+//           slug: article.slug,
+//         },
+//       };
+//     });
+//   return { paths, fallback: "blocking" };
+// };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const { slug, categoryId } = params;
   try {
     const category = blogConfig.categories.find((cat) => cat.id === categoryId);
@@ -148,7 +148,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         data: {},
         errorCode: 404,
       },
-      revalidate: 60,
+      // revalidate: 60,
     };
   }
 };
