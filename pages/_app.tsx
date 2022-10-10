@@ -10,6 +10,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { useRouter } from "next/dist/client/router";
 import { useEffect } from "react";
 import blogConfig from "@/blog.config";
+import Loader from "../components/spinner/Loader";
 
 library.add(faTwitter, faFacebook, faGithub);
 
@@ -64,6 +65,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </>
       )}
       <GlobalStyle />
+      <Loader />
       <Component {...pageProps} />
     </>
   );
