@@ -22,8 +22,10 @@ export const Content: React.FC<{ content: string }> = ({ content }) => {
             :global(.embed) {
               margin-bottom: 1.25rem;
               width: 100%;
-              height: 140px;
+              height: 180px;
+              padding-top: 10px;
               border: none;
+              box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
             }
 
             :global(.quote) {
