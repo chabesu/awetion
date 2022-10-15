@@ -159,6 +159,10 @@ const blogConfig: BlogConfig = {
       id: "english",
       title: "English",
     },
+    {
+      id: "football",
+      title: "FOOTBALL",
+    },
   ],
 };
 
