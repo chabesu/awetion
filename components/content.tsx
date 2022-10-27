@@ -303,6 +303,8 @@ export const Content: React.FC<{ content: string }> = ({ content }) => {
               width: 100%;
               height: 0;
               padding-top: 56.25%;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
             }
             :global(.video iframe) {
               position: absolute;
