@@ -10,6 +10,7 @@ import {
 } from "@notionhq/client/build/src/api-endpoints";
 import { Fragment } from "react";
 import { renderToString } from "react-dom/server";
+import { parseYouTubeVideoId } from "@/utils/youtube";
 import { Article } from "../types";
 
 const notion = new Client({
@@ -225,6 +226,32 @@ const renderBlock = (block: BlockObjectResponse) => {
       return `❌ Unsupported block (${
         type === "unsupported" ? "unsupported by Notion API" : type
       })`;
+    case "video": {
+      let youtubeurl: URL;
+      try {
+        youtubeurl = new URL(value.external.url);
+      } catch {
+        return null;
+      }
+
+      const videoId = parseYouTubeVideoId(youtubeurl);
+      if (videoId === "") {
+        return null;
+      }
+
+      return (
+        <div className="video">
+          <iframe
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            key={videoId}
+          />
+        </div>
+      );
+    }
   }
 };
 
