@@ -82,6 +82,7 @@ export const getStaticProps = async () => {
           const { content, ...others } = article;
           return others;
         }),
+      revalidate: 60,
     },
   };
 };
