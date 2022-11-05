@@ -163,6 +163,10 @@ const blogConfig: BlogConfig = {
       id: "football",
       title: "FOOTBALL",
     },
+    {
+      id: "music",
+      title: "MUSIC",
+    },
   ],
 };
 
