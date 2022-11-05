@@ -1,6 +1,7 @@
 import blogConfig from "@/blog.config";
 import { CodeBlock } from "@/components/notion/CodeBlock";
 import { Text } from "@/components/notion/Text";
+import Tweets from "@/components/notion/Twitter";
 
 import { Client } from "@notionhq/client";
 import {
@@ -188,6 +189,9 @@ const renderBlock = (block: BlockObjectResponse) => {
         />
       );
     case "embed":
+      if (/^https:\/\/twitter\.com/.test(block.embed.url)) {
+        return <Tweets block={block} />;
+      }
       return <iframe title="embed" src={block.embed.url} className="embed" />;
     case "child_database":
       return <div>{block.child_database.title}</div>;
