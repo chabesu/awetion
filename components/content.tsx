@@ -265,6 +265,7 @@ export const Content: React.FC<{ content: string }> = ({ content }) => {
               border-radius: 3px;
               word-break: normal;
               word-wrap: normal;
+              max-width: 860px;
               :global(code) {
                 margin: 0;
                 padding: 0;
