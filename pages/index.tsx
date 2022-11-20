@@ -63,7 +63,7 @@ const TopPage = ({ articles, max }: { articles: Article[]; max: number }) => {
 
 export default TopPage;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const articles = await getArticles();
 
   return {
@@ -82,7 +82,6 @@ export const getStaticProps = async () => {
           const { content, ...others } = article;
           return others;
         }),
-      revalidate: 60,
     },
   };
 };
